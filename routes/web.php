@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,5 +14,7 @@ use App\Http\Controllers\TodoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/test',[TodoController::class,'index']);
+Route::get('/',[TodoController::class,'index']);
+Route::post('/todo/create', [TodoController::class, 'create']);
+Route::gost('/todo/update', [TodoController::class, 'update']);
+Route::gost('/todo/dalete', [TodoController::class, 'delete']);

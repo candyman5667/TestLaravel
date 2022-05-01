@@ -14,10 +14,10 @@ class CreateWorksTable extends Migration
     public function up()
     {
         Schema::create('works', function (Blueprint $table) {
-            $table->bigint('id',20);
-            $table->verchar('content',191);
-            $table->timestamp('created_at')->useCurrent()->nullable;
-            $table->timestamp('updated_at')->useCurrent()->nullable;
+            $table->bigInteger('id',20);
+            $table->string('content',191);
+            $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
 
